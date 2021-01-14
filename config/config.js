@@ -128,6 +128,12 @@ var config = {
 				]
 			}
 		},
+		// Sonos
+		{
+			module: 'MMM-Sonos',
+			position: 'top_right', // you may choose any location
+			config: {}
+		}
 
 		// iFrame
 		/*
