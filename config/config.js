@@ -107,7 +107,7 @@ var config = {
 		{
 			module: 'MMM-xiaomi',
 			position: 'bottom_left',
-			header: '温度 / 湿度',  // This is optional
+			header: '温度 / 湿度',  //This is optional 
 			config: {
 				gatewayIP: '192.168.3.117',
 				gatewayToken: '8586ccf1a701c157084e97dcc15a6544',
