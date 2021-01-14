@@ -85,6 +85,7 @@ var config = {
 				appid: "0aed55705d1ab8ea6c8c51f401907cbe"
 			}
 		},
+		
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
@@ -103,7 +104,102 @@ var config = {
 		},
 
 		/*******第三方*******/
+		// google 地图2点最佳线路
+		{
+            module: 'MMM-google-route',
+            position: 'bottom_left',
+            config: {
+				refreshPeriod:0,
+                key: 'AIzaSyAz1sw-HZSJLHxuFycK3t4xi8Vjrgm3M-Q',
+                directionsRequest:{
+                    origin: '39.946878456091746, 116.84601918520896', 	// 起始 青年社区二期
+					//destination: '39.92450048568352, 116.56273854103077'
+					destination: '39.97715029595599, 116.39419299870283' // 目的地 北土城
+				},
+				fontSize:"9px"
+            }
+		},
+		// 从星期一到星期五的6:00 AM到8:00 AM每2分钟刷新路线
+		{
+			module: 'MMM-ModuleScheduler',
+			config: {
+				notification_schedule: [
+					{ notification: 'MMM-google-route/refresh', schedule: '0/2 6-8 * * 1-5' }
+				]
+			}
+		},
+
+		// iFrame
+		{
+			module: 'MMM-SmartWebDisplay',
+			position: 'bottom_right',	// This can be any of the regions.
+			config: {
+				// See 'Configuration options' for more information.
+				// logDebug: false, //set to true to get detailed debug logs. To see them : "Ctrl+Shift+i"
+				height:"300px", //hauteur du cadre en pixel ou %
+				// width:"100%", //largeur
+				updateInterval: 0, //in min. Set it to 0 for no refresh (for videos)
+				//NextURLInterval: 0.5, //in min, set it to 0 not to have automatic URL change. If only 1 URL given, it will be updated
+				displayLastUpdate: false, //to display the last update of the URL
+				displayLastUpdateFormat: 'ddd - HH:mm:ss', //format of the date and time to display
+				url: ["http://192.168.3.230:8123/map"], //source of the URL to be displayed
+				scrolling: "no", // allow scrolling or not. html 4 only
+				shutoffDelay: 10000 //delay in miliseconds to video shut-off while using together with MMM-PIR-Sensor 
+				}
+		},
+
+		// HomeAssistant前端模块
 		/*
+		{
+			module: "MMM-HomeAssistant",
+			position: "middle_center",
+			config: {
+			  host: "192.168.3.230",
+			  port: 8123, // your HA port, 8123 by default.
+			  accessToken: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiI5NDRjZDEyNWM0YWI0NGQ5YTZmOGVhZDJhNmQyYTU0YSIsImlhdCI6MTYxMDYzNDU1MCwiZXhwIjoxOTI1OTk0NTUwfQ.cQ3CtaL8JaazROMeGsnxcM674fnb6MrZH2pt5__0qAg",
+			  updateInterval: 5*1000
+			}
+		},
+		*/
+
+		/*
+		{
+            module: "MMM-WeatherChart",
+            position: "top_right",
+            config: {
+                apiKey: "0aed55705d1ab8ea6c8c51f401907cbe",
+                dataNum: 12,
+                dataType: "hourly",
+                height: "500px",
+                width: "800px",
+                lat: 35.571337,
+                lon: 139.633989,
+                units: "metric",
+            }
+		}*/
+		
+		/*
+		// 网络连接状态
+		{
+			module: 'MMM-connection-status',
+			header: "网络连接",
+			position: 'top_left', // Or any valid MagicMirror position.
+			config: {
+				// See 'Configuration options' for more information.
+			}
+		},
+		// 网络连接速度
+		{
+			module: 'MMM-NetworkConnection',
+			position: 'top_left', // Or any valid MagicMirror position.
+			config: {
+				maxTime:5000,
+				serverId:""
+				// See 'Configuration options' for more information.
+			}
+		}
+		
+		
 		{
 			module: 'MMM-xiaomi',
 			position: 'bottom_left',
