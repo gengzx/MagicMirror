@@ -130,6 +130,7 @@ var config = {
 		},
 
 		// iFrame
+		/*
 		{
 			module: 'MMM-SmartWebDisplay',
 			position: 'bottom_right',	// This can be any of the regions.
@@ -146,7 +147,7 @@ var config = {
 				scrolling: "no", // allow scrolling or not. html 4 only
 				shutoffDelay: 10000 //delay in miliseconds to video shut-off while using together with MMM-PIR-Sensor 
 				}
-		},
+		},*/
 
 		// HomeAssistant前端模块
 		/*
