@@ -133,8 +133,38 @@ var config = {
 			module: 'MMM-Sonos',
 			position: 'top_right', // you may choose any location
 			config: {}
-		}
+		},
 
+		{
+			module: 'MMM-iFrame',
+			position: 'middle_center',
+			config: {
+				// See 'Configuration options' for more information.
+					url: ["http://192.168.3.230:8123/"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
+					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
+					width: "1080", // width of iframe
+					height: "1920", // height of iframe
+					frameWidth: "100%" // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
+			}
+		},
+
+
+		{
+            module: 'MMM-Carousel',
+            position: 'bottom_bar', // Required only for navigation controls
+            config: {
+                transitionInterval: 10000,
+                showPageIndicators: true,
+                showPageControls: true,
+                ignoreModules: ['clock', 'alert'],
+                mode: 'slides',
+                slides: {
+                    main: ['calendar', 'compliments', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'MMM-Sonos'],
+                    "Slide 2": ['MMM-iFrame']
+                }
+            }
+        }
+		
 		// iFrame
 		/*
 		{
