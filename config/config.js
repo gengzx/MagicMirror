@@ -143,7 +143,7 @@ var config = {
 					url: ["http://192.168.3.230:8123/"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
 					updateInterval: 0.5 * 60 * 1000, // rotate URLs every 30 seconds
 					width: "1080", // width of iframe
-					height: "1920", // height of iframe
+					height: "1990", // height of iframe
 					frameWidth: "100%" // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
 			}
 		},
@@ -153,7 +153,7 @@ var config = {
             module: 'MMM-Carousel',
             position: 'bottom_bar', // Required only for navigation controls
             config: {
-                transitionInterval: 20000,
+                transitionInterval: 3600000,
                 showPageIndicators: true,
                 showPageControls: true,
                 ignoreModules: ['clock', 'alert'],
