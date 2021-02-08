@@ -141,7 +141,7 @@ var config = {
 			config: {
 				// See 'Configuration options' for more information.
 					url: ["http://192.168.3.230:8123/"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
-					updateInterval: 0, // rotate URLs every 30 seconds
+					updateInterval: 5 * 60 * 1000, // rotate URLs every 30 seconds
 					width: "1080", // width of iframe
 					height: "1920", // height of iframe
 					frameWidth: "100%" // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
@@ -159,11 +159,20 @@ var config = {
                 ignoreModules: ['clock', 'alert'],
                 mode: 'slides',
                 slides: {
-                    main: ['calendar', 'compliments', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'MMM-Sonos'],
+                    main: ['calendar', 'compliments', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'WallberryTheme'],
                     "Slide 2": ['MMM-iFrame']
                 }
             }
-        }
+		},
+		
+		{
+			module: "WallberryTheme",
+			position: "fullscreen_below", // Required Position
+			config: {
+			  unsplashAccessKey: "eWfMrWQe_qj8hWr3bdl7PGMl9g3_bYbsOZUM8AVbwPI", // REQUIRED
+			  collections: "2589108" // optional - leave empty for a random photo
+			}
+		},
 		
 		// iFrame
 		/*
