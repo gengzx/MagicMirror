@@ -153,7 +153,7 @@ var config = {
             module: 'MMM-Carousel',
             position: 'bottom_bar', // Required only for navigation controls
             config: {
-                transitionInterval: 10000,
+                transitionInterval: 20000,
                 showPageIndicators: true,
                 showPageControls: true,
                 ignoreModules: ['clock', 'alert'],
