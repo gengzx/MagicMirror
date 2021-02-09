@@ -62,10 +62,10 @@ var config = {
 				]
 			}
 		},
-		{
-			module: "compliments",
-			position: "lower_third"
-		},
+		// {
+		// 	module: "compliments",
+		// 	position: "lower_third"
+		// },
 		{
 			module: "currentweather",
 			position: "top_right",
@@ -160,7 +160,7 @@ var config = {
                 ignoreModules: ['alert'],
                 mode: 'slides',
                 slides: {
-                    main: ['clock', 'calendar', 'compliments', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'WallberryTheme'],
+                    main: ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'WallberryTheme'],
                     "Slide 2": ['MMM-iFrame']
                 }
             }
