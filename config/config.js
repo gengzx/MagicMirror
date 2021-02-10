@@ -135,6 +135,7 @@ var config = {
 			config: {}
 		},
 
+		// iFrame
 		{
 			module: 'MMM-iFrame',
 			position: 'middle_center',
@@ -148,8 +149,24 @@ var config = {
 					frameWidth: "100%" // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
 			}
 		},
+		
+		// 背景图片
+		{
+			module: "WallberryTheme",
+			position: "fullscreen_below", // Required Position
+			config: {
+			  unsplashAccessKey: "eWfMrWQe_qj8hWr3bdl7PGMl9g3_bYbsOZUM8AVbwPI", // REQUIRED
+			  collections: "2589108" // optional - leave empty for a random photo
+			}
+		},
+		
+		{
+			module: "MMM-PiTemp",
+			position: "top_right",
+			config: {}
+		},
 
-
+		// 轮播导航
 		{
             module: 'MMM-Carousel',
             position: 'bottom_bar', // Required only for navigation controls
@@ -165,16 +182,7 @@ var config = {
                 }
             }
 		},
-		
-		{
-			module: "WallberryTheme",
-			position: "fullscreen_below", // Required Position
-			config: {
-			  unsplashAccessKey: "eWfMrWQe_qj8hWr3bdl7PGMl9g3_bYbsOZUM8AVbwPI", // REQUIRED
-			  collections: "2589108" // optional - leave empty for a random photo
-			}
-		},
-		
+
 		// iFrame
 		/*
 		{
