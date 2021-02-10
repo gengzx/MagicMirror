@@ -174,7 +174,7 @@ var config = {
                 transitionInterval: 3600000,
                 showPageIndicators: true,
 				showPageControls: true,
-                ignoreModules: ['alert'],
+                ignoreModules: ['alert', 'MMM-PiTemp'],
                 mode: 'slides',
                 slides: {
                     main: ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'WallberryTheme'],
