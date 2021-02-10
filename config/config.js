@@ -150,16 +150,6 @@ var config = {
 			}
 		},
 		
-		// 背景图片
-		{
-			module: "WallberryTheme",
-			position: "fullscreen_below", // Required Position
-			config: {
-			  unsplashAccessKey: "eWfMrWQe_qj8hWr3bdl7PGMl9g3_bYbsOZUM8AVbwPI", // REQUIRED
-			  collections: "2589108" // optional - leave empty for a random photo
-			}
-		},
-		
 		{
 			module: "MMM-PiTemp",
 			position: "top_right",
@@ -174,13 +164,23 @@ var config = {
                 transitionInterval: 3600000,
                 showPageIndicators: true,
 				showPageControls: true,
-                ignoreModules: ['alert', 'MMM-PiTemp'],
+                ignoreModules: ['alert'],
                 mode: 'slides',
                 slides: {
-                    main: ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'WallberryTheme'],
+                    main: ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'WallberryTheme', 'MMM-PiTemp'],
                     "Slide 2": ['MMM-iFrame']
                 }
             }
+		},
+
+		// 背景图片
+		{
+			module: "WallberryTheme",
+			position: "fullscreen_below", // Required Position
+			config: {
+				unsplashAccessKey: "eWfMrWQe_qj8hWr3bdl7PGMl9g3_bYbsOZUM8AVbwPI", // REQUIRED
+				collections: "2589108" // optional - leave empty for a random photo
+			}
 		},
 
 		// iFrame
