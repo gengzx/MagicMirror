@@ -145,7 +145,7 @@ var config = {
 					updateInterval: 5 * 60 * 1000, // rotate URLs every 30 seconds
 					scrolling:"yes",
 					width: "1080", // width of iframe
-					height: "1920", // height of iframe
+					height: "1900", // height of iframe
 					frameWidth: "100%" // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
 			}
 		},
