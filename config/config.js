@@ -160,7 +160,7 @@ var config = {
 		// 地球实时照片
 		{
 			module: 'MMM-Globe',
-			position: 'center',
+			position: 'middle_center',
 			config: {
 				style: 'geoColor',
 				imageSize: 600,
