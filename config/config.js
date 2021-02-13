@@ -150,10 +150,23 @@ var config = {
 			}
 		},
 		
+		// CPU温度
 		{
 			module: "MMM-PiTemp",
 			position: "top_right",
 			config: {}
+		},
+
+		// 地球实时照片
+		{
+			module: 'MMM-Globe',
+			position: 'center',
+			config: {
+				style: 'geoColor',
+				imageSize: 600,
+				ownImagePath:'',
+				updateInterval: 10*60*1000
+			}
 		},
 
 		// 轮播导航
@@ -168,7 +181,8 @@ var config = {
                 mode: 'slides',
                 slides: {
                     main: ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'WallberryTheme', 'MMM-PiTemp'],
-                    "Slide 2": ['MMM-iFrame']
+					"Slide 2": ['MMM-iFrame'],
+					"Slide 3": ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'MMM-PiTemp', 'MMM-Globe']
                 }
             }
 		},
@@ -179,7 +193,8 @@ var config = {
 			position: "fullscreen_below", // Required Position
 			config: {
 				unsplashAccessKey: "eWfMrWQe_qj8hWr3bdl7PGMl9g3_bYbsOZUM8AVbwPI", // REQUIRED
-				collections: "2589108" // optional - leave empty for a random photo
+				//collections: "2589108", // optional - leave empty for a random photo
+				queries: ["风景","cars", "new york", "black cat", "beijing","abstract"]
 			}
 		},
 
