@@ -145,7 +145,7 @@ var config = {
 					updateInterval: 5 * 60 * 1000, // rotate URLs every 30 seconds
 					scrolling:"yes",
 					width: "1080", // width of iframe
-					height: "1800", // height of iframe
+					height: "1900", // height of iframe
 					frameWidth: "100%" // width of embedded iframe, height is beeing calculated by aspect ratio of iframe
 			}
 		},
@@ -181,8 +181,8 @@ var config = {
                 mode: 'slides',
                 slides: {
                     main: ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'WallberryTheme', 'MMM-PiTemp'],
-					"Slide 2": ['MMM-iFrame'],
-					"Slide 3": ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'MMM-PiTemp', 'MMM-Globe']
+					"Slide 3": ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'MMM-PiTemp', 'MMM-Globe'],
+					"Slide 2": ['MMM-iFrame']
                 }
             }
 		},
