@@ -138,7 +138,7 @@ var config = {
 		// iFrame
 		{
 			module: 'MMM-iFrame',
-			position: 'middle_center',
+			position: 'fullscreen_below',
 			config: {
 				// See 'Configuration options' for more information.
 					url: ["http://192.168.3.230:8123/"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
@@ -157,7 +157,17 @@ var config = {
 			config: {}
 		},
 
-
+		// 地球实时照片
+		{
+			module: 'MMM-Globe',
+			position: 'middle_center',
+			config: {
+				style: 'geoColor',
+				imageSize: 600,
+				ownImagePath:'',
+				updateInterval: 10*60*1000
+			}
+		},
 
 		// 轮播导航
 		{
@@ -171,24 +181,12 @@ var config = {
                 mode: 'slides',
                 slides: {
                     main: ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'WallberryTheme', 'MMM-PiTemp'],
-					"Slide 3": ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'MMM-PiTemp', 'MMM-Globe'],
-					"Slide 2": ['MMM-iFrame']
+					"Slide 2": ['MMM-iFrame'],
+					"Slide 3": ['clock', 'calendar', 'currentweather', 'newsfeed', 'MMM-google-route', 'weatherforecast', 'MMM-Sonos', 'MMM-PiTemp', 'MMM-Globe']
                 }
             }
 		},
 
-				// 地球实时照片
-				{
-					module: 'MMM-Globe',
-					position: 'middle_center',
-					config: {
-						style: 'geoColor',
-						imageSize: 600,
-						ownImagePath:'',
-						updateInterval: 10*60*1000
-					}
-				},
-				
 		// 背景图片
 		{
 			module: "WallberryTheme",
