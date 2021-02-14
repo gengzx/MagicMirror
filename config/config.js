@@ -139,6 +139,7 @@ var config = {
 		{
 			module: 'MMM-iFrame',
 			position: 'fullscreen_below',
+			classes: "iframe-homeassistant",
 			config: {
 				// See 'Configuration options' for more information.
 					url: ["http://192.168.3.230:8123/"],  // as many URLs you want or you can just ["ENTER IN URL"] if single URL.
