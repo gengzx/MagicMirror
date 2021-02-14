@@ -157,17 +157,7 @@ var config = {
 			config: {}
 		},
 
-		// 地球实时照片
-		{
-			module: 'MMM-Globe',
-			position: 'middle_center',
-			config: {
-				style: 'geoColor',
-				imageSize: 600,
-				ownImagePath:'',
-				updateInterval: 10*60*1000
-			}
-		},
+
 
 		// 轮播导航
 		{
@@ -187,6 +177,18 @@ var config = {
             }
 		},
 
+				// 地球实时照片
+				{
+					module: 'MMM-Globe',
+					position: 'middle_center',
+					config: {
+						style: 'geoColor',
+						imageSize: 600,
+						ownImagePath:'',
+						updateInterval: 10*60*1000
+					}
+				},
+				
 		// 背景图片
 		{
 			module: "WallberryTheme",
